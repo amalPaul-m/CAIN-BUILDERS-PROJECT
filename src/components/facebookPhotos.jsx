@@ -11,8 +11,6 @@ import img4 from "../assets/gallery/4.jpeg";
 import img5 from "../assets/gallery/5.jpeg";
 import img6 from "../assets/gallery/6.jpeg";
 
-import "./facebookPhotos.css";
-
 export default function FacebookPhotos() {
   const photos = [img1, img2, img3, img4, img5, img6];
 
