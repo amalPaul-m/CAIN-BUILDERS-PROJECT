@@ -1,0 +1,66 @@
+/* Wrapper with padding */
+.local-photo-slider {
+  width: 100%;
+  padding: 20px 25px;
+  box-sizing: border-box;
+  margin-top: -30px;
+}
+
+/* Card styling */
+.slide-card {
+  width: 100%;
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.slide-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover effect */
+.slide-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Swiper arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  background: rgba(0, 0, 0, 0.6);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Responsive Height */
+@media (max-width: 1024px) {
+  .slide-card {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .local-photo-slider {
+    padding: 10px;
+  }
+  .slide-card {
+    height: 250px;
+    border-radius: 8px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+  }
+}

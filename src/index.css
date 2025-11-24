@@ -1,0 +1,298 @@
+/* Imports */
+@import url("https://fonts.cdnfonts.com/css/devil-breeze");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/bimbo");
+
+/* ------------------------------
+   GLOBAL STYLES
+--------------------------------*/
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #1b1b1b;
+  color: #eef8ce;
+  font-size: 14px;
+  background-image: url(/src/assets/bg.png),
+    repeating-linear-gradient(
+      to right,
+      transparent 0 500px,
+      #73814b33 500px 501px
+    );
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* ------------------------------
+   LAYOUT
+--------------------------------*/
+.section {
+  width: 100%;
+  min-height: 20vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-fit {
+  width: min(1200px, 90vw);
+  margin: auto;
+  position: relative;
+  padding-block: 10em;
+}
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+header {
+  padding-block: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1b1b1b11;
+  backdrop-filter: blur(20px);
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0 500px,
+    #eee1 500px 501px
+  );
+  z-index: 100;
+}
+
+header .content-fit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: unset !important;
+  padding-block: unset !important;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2em;
+}
+
+/* ------------------------------
+   BANNER
+--------------------------------*/
+#banner .title {
+  color: #d1ff48;
+  font-size: 11em;
+  font-family: "devil breeze";
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+
+#banner .title::before {
+  content: attr(data-before);
+  position: absolute;
+  z-index: -1;
+  color: oklch(0.78 0.17 80.01 / 0.19);
+  mask: linear-gradient(
+    to bottom,
+    #000 -80%,
+    transparent,
+    #000,
+    transparent 200%
+  );
+  transform: scaleY(-1) translateY(-0.44lh);
+}
+
+/* ------------------------------
+   INTRO SECTION
+--------------------------------*/
+.section .decorate {
+  position: fixed;
+  z-index: -100;
+  pointer-events: none;
+}
+
+#intro .content-fit {
+  display: flex;
+  gap: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ------------------------------
+   TITLES
+--------------------------------*/
+.section .number {
+  font-family: "devil breeze";
+  font-size: 15em;
+  font-weight: bold;
+}
+
+.section .content-fit .title {
+  font-family: "devil breeze";
+  font-size: 5em;
+  font-weight: bold;
+}
+
+/* ------------------------------
+   DESCRIPTION
+--------------------------------*/
+#description .content-fit {
+  padding-right: 30%;
+}
+
+#description .number {
+  font-size: 5em;
+}
+#description .title {
+  font-size: 5em;
+  font-weight: 500;
+}
+
+/* ------------------------------
+   CONTACT
+--------------------------------*/
+#contact .content-fit {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#contact table {
+  width: min(800px, 90vw);
+  padding-top: 2em;
+  font-size: 1.8em;
+  margin: auto;
+}
+
+#contact table td {
+  padding-block: 0.5em;
+  border-bottom: 1px dashed #445022;
+}
+
+#contact table td:nth-child(1) {
+  text-align: left;
+  font-weight: 500;
+}
+
+#contact table td:nth-child(2) {
+  text-align: right;
+  font-weight: 200;
+}
+
+#contact .sign {
+  font-size: 10em;
+}
+
+/* ------------------------------
+   3D Container
+--------------------------------*/
+#container3D {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* ------------------------------
+   RESPONSIVE BREAKPOINTS
+--------------------------------*/
+
+/* TABLETS – max 1023px */
+@media screen and (max-width: 1023px) {
+  #banner .title {
+    font-size: 6em;
+  }
+
+  #intro .content-fit {
+    flex-direction: column;
+    gap: 3em;
+    text-align: center;
+  }
+
+  .section .number {
+    font-size: 9em;
+  }
+
+  .section .content-fit .title {
+    font-size: 3.5em;
+  }
+
+  #description .content-fit {
+    padding-right: 0;
+  }
+
+  #contact table {
+    font-size: 1.3em;
+  }
+}
+
+/* MOBILE – max 767px */
+@media screen and (max-width: 767px) {
+
+  #banner .title {
+    font-size: 4em;
+  }
+
+  .section {
+    padding-block: 9em;
+  }
+
+  .content-fit {
+    padding-block: 6em;
+  }
+
+  .section .number {
+    font-size: 5em;
+  }
+
+  .section .content-fit .title {
+    font-size: 2.5em;
+  }
+
+  #contact table {
+    font-size: 1em;
+  }
+
+  #contact .sign {
+    font-size: 3em;
+  }
+
+  #container3D {
+    position: sticky;
+  }
+}
+
+/* MOBILE SMALL – max 480px */
+@media screen and (max-width: 480px) {
+  #banner .title {
+    font-size: 4em;
+  }
+
+  header nav ul {
+    gap: 1em;
+    font-size: 12px;
+  }
+
+  .section .content-fit .title {
+    font-size: 2em;
+  }
+
+  #contact table {
+    font-size: 0.9em;
+  }
+}
+
+/* ------------------------------
+   LOGO FIX
+--------------------------------*/
+.logo {
+  filter: invert(1) brightness(200%);
+}

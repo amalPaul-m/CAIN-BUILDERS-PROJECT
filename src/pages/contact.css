@@ -1,0 +1,50 @@
+.contact-icons {
+  display: flex;
+  gap: clamp(15px, 5vw, 40px);      /* small gap on mobile, large on desktop */
+  justify-content: center;
+  flex-wrap: wrap;                  /* icons wrap on small screens */
+  margin: clamp(20px, 5vw, 50px) 0; /* responsive top/bottom spacing */
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 4vw, 1.8rem); /* icon size scales */
+  color: #d1ff48;
+  transition: all 0.3s ease;
+  
+  padding: clamp(8px, 3vw, 12px);       /* padding adapts */
+  border-radius: 50%;
+  
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hover effects */
+.contact-icons a:hover {
+  transform: scale(1.25);
+}
+
+/* Brand color hovers */
+.contact-icons a[href^="tel"]:hover { color: #34b7f1; }
+.contact-icons a[href^="mailto"]:hover { color: #c71610; }
+.contact-icons a[href*="example.com"]:hover { color: #0a66c2; }
+.contact-icons a[href*="instagram.com"]:hover { color: #e1306c; }
+.contact-icons a[href*="facebook.com"]:hover { color: #1877f2; }
+.contact-icons a[href*="wa.me"]:hover { color: #25d366; }
+
+
+/* ---- Extra strong responsiveness for very small screens ---- */
+@media (max-width: 480px) {
+  .contact-icons {
+    gap: 20px;
+  }
+
+  .contact-icons a {
+    padding: 8px;
+    font-size: 1.3rem;
+    transform: none;
+  }
+}
