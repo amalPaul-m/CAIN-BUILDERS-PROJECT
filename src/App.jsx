@@ -18,7 +18,7 @@ function App() {
   React.useEffect(() => {
     setTimeout(() => {
       setLoader(false)
-    }, 4000);
+    }, 6000);
   },[]);
 
   return (
