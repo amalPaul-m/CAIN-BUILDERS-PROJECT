@@ -4,13 +4,12 @@ import Header from './components/header.jsx';
 import Banner from './pages/banner.jsx';
 import Intro from './pages/intro.jsx';
 import Description from './pages/description.jsx';
-// import Bee3D from './components/3DObject.jsx';
+import Bee3D from './components/3DObject.jsx';
 import ThirdPage from './pages/thirdPage.jsx';
 import Contact from './pages/contact.jsx';
 import Footer from './pages/footer.jsx';
 import { RotatingLines } from 'react-loader-spinner'
 
-const Bee3D = React.lazy(() => import("./components/3DObject.jsx"));
 
 function App() {
 
