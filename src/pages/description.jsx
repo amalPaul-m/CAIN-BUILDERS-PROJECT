@@ -1,6 +1,6 @@
 import React from "react";
 import Leaf1 from "../assets/leaf1.png";
-import FacebookPhotos from "../components/facebookPhotos"
+import FacebookPhotos from "../components/facebookPhotos.jsx"
 
 const Description = () => {
     return (
